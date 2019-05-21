@@ -1,0 +1,5 @@
+#!/bin/bash
+clear
+nasm -f bin -o yeetOS.bin yeetOS.asm
+dd conv=notrunc if=yeetOS.bin of=yeetOS.flp
+qemu-system-i386 -fda yeetOS.flp
